@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>assignment 2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //check Palindrome -----------------------------
+
+      alert("#1 check palindrome ")
+      function checkPalindrome(str) {
+      const len = string.length;
+      for (let i = 0; i < len / 2; i++) {
+          if (string[i] !== string[len - 1 - i]) {
+              return 'It is not a palindrome';
+          }
+      }
+      return 'It is a palindrome';
+      }
+      const string = prompt('Enter a string: ');
+      const value = checkPalindrome(string);
+      alert(value);
+
+
+      //add digits of a number
+      alert("#2 add digits");
+      var value = prompt("Enter number: ");
+      sum = 0;
+      while (value) {
+        sum += value % 10;
+        value = Math.floor(value / 10);
+      }
+      alert(sum);
+
+
+      // #3 calculate time wolf would beat rabbit 25 kmh 18kmh
+      alert("#3 calculate time of catch up wolf and rabbit")
+      var rabbitSpeed = 18;
+      var wolfSpeed = 25;
+      var rabbitDistance = parseInt(prompt("Enter rabbit distance"));
+      var wolfDistance = 0;
+
+      var t = 1;
+      while(parseInt(rabbitDistance) >= parseInt(wolfDistance)){
+        rabbitDistance = rabbitDistance+ rabbitSpeed*t;
+        wolfDistance += wolfSpeed*t;
+        console.log("rabbit: " + rabbitDistance);
+        console.log("wolf: " + wolfDistance);
+        t++;
+      }
+
+      alert("time to catchup: " + t);
+
+      //find orts davhar haalga
+      alert("#4 find orts davhar haalga")
+      var toot = parseInt(prompt("Enter number: "));
+      var stories = 9;
+      var amtBuildings = 3;
+      var doorsPerFloor = 4;
+
+      function findOrts(n){
+        var amtDoorsPerFloor = 4*9;
+        return(parseInt(n/amtDoorsPerFloor)+1);
+      }
+
+      var orts = findOrts(toot);
+      var davhar = parseInt((orts*(stories * doorsPerFloor) - toot)/stories);
+      var haalga = (orts*(stories * doorsPerFloor) - toot) % doorsPerFloor;
+
+      alert("orts: " + orts + " | davhar: " + davhar + " | haalga: " + haalga);
+
+      //change color and location of square based on night and day
+      /*
+      function changeBackgroundColor(){
+        var today = new Date();
+        var time = today.getHours();
+        var div = document.div;
+        if (time < 12){
+          div.style.background = 'green';
+          div.style.left = '10px';
+          div.style.top = '10px';
+        }
+        else{
+          div.style.background = 'red';
+          div.style.left = '500px';
+          div.style.top = '500px';
+        }
+      }
+      window.addEventListener("load",function() { changeBackgroundColor() });
+      */
+    </script>
+    <div id = 'box' style = "background-color:black; width : 5%; height:50px;">
+
+    </div>
+  </body>
+</html>

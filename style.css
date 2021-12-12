@@ -1,0 +1,14 @@
+body {
+	background: #ccc;
+	margin:20px;
+}
+
+.gameBox {
+	width:640px;
+	height:480px;
+}
+
+.container {
+	width: 800px;
+	height: 600px;
+}
